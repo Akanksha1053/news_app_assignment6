@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_assignment6/constants/colors.dart';
+import 'package:news_app_assignment6/constants/strings.dart';
 import 'package:news_app_assignment6/constants/styles.dart';
 import 'package:news_app_assignment6/providers/provider_data.dart';
 import 'package:news_app_assignment6/widgets/app_drawer.dart';
 import 'package:news_app_assignment6/widgets/articles_listview_widget.dart';
 import 'package:provider/provider.dart';
+import 'package:news_app_assignment6/widgets/appBarIcons.dart';
 
 import '../widgets/app_drawer.dart';
 import '../widgets/filter_widget.dart';
@@ -30,9 +32,8 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         }),
-        // backgroundColor: Colors.white,
         backgroundColor: appBarThemeBackgroundColor,
-        title: Text('Coinstelly',
+        title: Text(appBarTitleText,
             style: GoogleFonts.satisfy(textStyle: appBarTitleStyle)),
         actions: const [
           AppBarIcons(Icons.notifications_outlined),
@@ -48,7 +49,6 @@ class HomeScreen extends StatelessWidget {
               children: [
                 FilterWidget(dataClass: dataClass),
                 const VerticalDivider(
-                  color: Colors.red,
                   thickness: 4,
                 ),
                 const AppBarIcons(Icons.filter),
@@ -58,24 +58,6 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class AppBarIcons extends StatelessWidget {
-  // ignore: use_key_in_widget_constructors
-  const AppBarIcons(this.icon);
-  final IconData icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: Icon(
-        icon,
-        color: appBarIconColor,
-        size: 30,
-      ),
-      onPressed: null,
     );
   }
 }

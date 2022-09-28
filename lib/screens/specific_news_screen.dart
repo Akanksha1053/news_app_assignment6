@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_assignment6/constants/colors.dart';
+import 'package:news_app_assignment6/constants/strings.dart';
 import 'package:news_app_assignment6/constants/styles.dart';
 import 'package:news_app_assignment6/providers/provider_data.dart';
-import 'package:news_app_assignment6/screens/home_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:news_app_assignment6/widgets/appBarIcons.dart';
 
 class SpecificNewsScreen extends StatelessWidget {
   const SpecificNewsScreen({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class SpecificNewsScreen extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        title: Text('Coinstelly',
+        title: Text(appBarTitleText,
             style: GoogleFonts.satisfy(textStyle: appBarTitleStyle)),
         actions: const [AppBarIcons(Icons.arrow_forward)],
       ),
@@ -91,7 +92,6 @@ class SpecificNewsScreen extends StatelessWidget {
                               ),
                               const Icon(
                                 Icons.remove_red_eye_outlined,
-                                color: Colors.red,
                               ),
                               Text(providerData.views.toString())
                             ],
@@ -105,7 +105,7 @@ class SpecificNewsScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Text(
-                        'Comments',
+                        staticCommentsText,
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -127,7 +127,8 @@ class SpecificNewsScreen extends StatelessWidget {
                           color: buttonBackgroundColor,
                           child: const TextButton(
                             onPressed: null,
-                            child: Text('Add Comment', style: buttonTextStyle),
+                            child: Text(addCommentButtonText,
+                                style: buttonTextStyle),
                           ))
                     ],
                   )

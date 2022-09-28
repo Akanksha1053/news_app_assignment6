@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app_assignment6/providers/provider_data.dart';
 
-class Articles extends ChangeNotifier {
+class Articles {
   late String authorName;
   late String dateTime;
   late String description;
