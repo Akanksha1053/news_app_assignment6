@@ -84,6 +84,8 @@ fonts:
       - asset: lib/assets/DancingScript-Regular.ttf
       - asset: lib/assets/DancingScript-Italic.ttf
         style: italic
+      - asset: lib/assets/DancingScript_Bold.ttf
+        weight: 700
       
         
   #   - family: Trajan Pro

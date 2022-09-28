@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_assignment6/constants/colors.dart';
 import 'package:news_app_assignment6/constants/styles.dart';
 import 'package:news_app_assignment6/providers/provider_data.dart';
@@ -31,7 +32,8 @@ class HomeScreen extends StatelessWidget {
         }),
         // backgroundColor: Colors.white,
         backgroundColor: appBarThemeBackgroundColor,
-        title: const Text('Coinstelly', style: appBarTitleStyle),
+        title: Text('Coinstelly',
+            style: GoogleFonts.satisfy(textStyle: appBarTitleStyle)),
         actions: const [
           AppBarIcons(Icons.notifications_outlined),
         ],

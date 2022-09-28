@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app_assignment6/constants/colors.dart';
 import 'package:news_app_assignment6/constants/styles.dart';
@@ -106,9 +107,9 @@ class _CreateNewArticleState extends State<CreateNewArticle> {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         backgroundColor: appBarThemeBackgroundColor,
-        title: const Text(
+        title: Text(
           'Add a new article',
-          style: appBarTitleStyle,
+          style: GoogleFonts.satisfy(textStyle: appBarTitleStyle),
         ),
         actions: [
           IconButton(
